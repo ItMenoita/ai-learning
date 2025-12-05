@@ -76,7 +76,7 @@ class Scalar:
             localgrad: Number
 
             for parent, localgrad in currentNode.parents:
-                # the child influence on the output * how much parent influences the child
+                #                  the child influence on the output * how much parent influences the child
                 parent.grad = (parent.grad or 0) + (currentNode.grad * localgrad)
 
     def buildTopology(self) -> deque:

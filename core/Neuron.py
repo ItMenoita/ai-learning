@@ -1,7 +1,7 @@
-from Scalar import Scalar
+from core.Scalar import Scalar
 from typing import Callable
-from InitFunctions import InitFunctions
-from ActivationFunctions import ActivationFunction
+from functions.InitFunctions import InitFunctions
+from functions.ActivationFunctions import ActivationFunction
 from numbers import Number
 from typing import Union
 

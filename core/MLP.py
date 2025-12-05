@@ -1,6 +1,6 @@
 from typing import Union
-from Layer import Layer
-from Scalar import Scalar
+from core.Layer import Layer
+from core.Scalar import Scalar
 
 
 class MLP:

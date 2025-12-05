@@ -1,6 +1,6 @@
-from MLP import MLP
-from Scalar import Scalar
-from LossFunctions import LossFunctions
+from core.MLP import MLP
+from core.Scalar import Scalar
+from functions.LossFunctions import LossFunctions
 
 ##Dataset
 

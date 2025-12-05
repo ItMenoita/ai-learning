@@ -1,5 +1,5 @@
-from Neuron import Neuron
-from Scalar import Scalar
+from core.Neuron import Neuron
+from core.Scalar import Scalar
 from typing import Union
 from numbers import Number
 

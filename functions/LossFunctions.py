@@ -1,4 +1,4 @@
-from Scalar import Scalar
+from core.Scalar import Scalar
 from numbers import Number
 
 

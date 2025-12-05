@@ -1,6 +1,8 @@
 from core.MLP import MLP
 from core.Scalar import Scalar
 from functions.LossFunctions import LossFunctions
+from optimizers.Adam import Adam
+from monitoring.LinearVisualizer import LinearVisualizer
 
 ##Dataset
 
@@ -22,6 +24,8 @@ model = MLP(3, [4, 4, 1])
 
 learningGradient = 0.01
 epochs = 10000
+optimizer = Adam(model.parameters())
+visualizer = LinearVisualizer()
 
 for i in range(epochs):
     result = []
@@ -34,12 +38,12 @@ for i in range(epochs):
     print(f"Epoch {str(i)} Loss: {str(loss)}")
 
     loss.backward()
-
-    p:Scalar
+    visualizer.addValue("Loss", loss.value)
     
-    for p in model.parameters():
-        p.value -= p.grad*learningGradient
-        p.grad = None
+    optimizer.step()
+    optimizer.zeroGrad()
+
+visualizer.plot()
 
 # print the parameters after training
 for p in model.parameters():
